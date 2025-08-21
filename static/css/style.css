@@ -1,0 +1,229 @@
+/* Page Style */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #74ebd5, #ACB6E5);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Contact Form Styling */
+form {
+    background-color: #ffffffcc;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    max-width: 450px;
+    width: 100%;
+    backdrop-filter: blur(5px);
+}
+
+#firstH {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #222;
+}
+
+.form-field {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+
+#name, #email, #phone, #subject, #message {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: border-color 0.3s ease-in-out;
+} 
+
+input:not(:placeholder-shown),
+textarea:not(:placeholder-shown) {
+    background-color: #eef5ff; 
+}
+
+#message {
+    resize: vertical;
+}
+
+#name:focus, #email:focus, #phone:focus, #subject:focus, #message:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Icon Styling for Validation */
+form img {
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    width: 18px;
+    height: 18px;
+    display: none;
+}
+
+/* Admin Table Styling */
+table {
+    width: 95%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #ffffffcc;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 12px 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+th a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+th a:hover {
+    text-decoration: underline;
+    color: #d4e3ff;
+}
+
+td {
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+tr:hover td {
+    background-color: #e0f0ff;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Admin filter/search form */
+#adminSearch {
+    padding: 8px;
+    width: 250px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+}
+
+#adminButton {
+    padding: 8px 16px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#adminButton:hover {
+    background-color: #0056b3;
+}
+
+.success-container {
+    background-color: #ffffffcc;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    max-width: 450px;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    text-align: center;
+}
+
+.success-container h1 {
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.lang-switch-right{
+    position: fixed;   
+    top: 15px;
+    right: 30px;       
+    font-size: 18px;
+    font-weight: bold;
+    color: white;}
+
+.lang-switch-left{
+    position: fixed;   
+    top: 15px;
+    left: 30px;        
+    font-size: 18px;
+    font-weight: bold;
+    color: white;}
+
+
+
+.lang-switch-left a,
+.lang-switch-right a{
+    color: white;           
+    text-decoration: none;  
+    display: flex;          
+    align-items: center;
+    gap: 5px;      }
+
+.lang-icon{
+    width: 30px;
+    height: 30px;
+}
+
+
+
+

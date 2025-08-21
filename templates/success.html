@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="{{ 'ar' if lang == 'ar' else 'en' }}" dir="{{ 'rtl' if lang == 'ar' else 'ltr' }}">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% if lang == "ar" %} تم إرسال الرسالة {% else %} Message Sent {% endif %}
+    </title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+    <div class="success-container">
+        <h1>
+            {% if lang == "ar" %} تم إرسال رسالتك بنجاح! {% else %} Your message was submitted successfully! {% endif %}
+        </h1>
+        <a href="{% if lang == 'ar' %}{{ url_for('home_ar') }}{% else %}{{ url_for('home') }}{% endif %}" class="btn">
+            {% if lang == "ar" %} أرسل رسالة أخرى {% else %} Send Another Message {% endif %}
+        </a>
+    </div>
+</body>
+</html>
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Message Sent</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+    <div class="success-container">
+        <h1>Your message was submitted successfully!</h1>
+        <a href="{{url_for('home')}}" class="btn">Send Another Message</a>
+    </div>
+</body>
+</html>-->

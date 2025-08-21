@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - View Messages</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="search-box">
+    <form action="{{ url_for('admin_page') }}" method="GET">
+        <input type="text" id= "adminSearch" name="search" placeholder="Search by name, subject..." value="{{ search }}">
+        <input type="submit" id= "adminButton" value="Search">
+    </form>
+</div>
+
+<h1>Submitted Messages</h1>
+<table border="1" cellpadding="5">
+    <tr>
+        <th>ID</th>
+        <th><a href="{{ url_for('admin_page', sort='Name', search=search) }}">Name</a></th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th><a href="{{ url_for('admin_page', sort='Subject', search=search) }}">Subject</a></th>
+        <th>Message</th>
+        <th><a href="{{ url_for('admin_page', sort='Submission_time', search=search) }}">Submission Time</a></th>
+        <th>Action</th>
+    </tr>
+    {% if messages %}
+        {% for msg in messages %}
+        <tr>
+            <td>{{ msg.ID }}</td>
+            <td>{{ msg.Name }}</td>
+            <td>{{ msg.Email }}</td>
+            <td>{{ msg.Phone }}</td>
+            <td>{{ msg.Subject }}</td>
+            <td>{{ msg.Message }}</td>
+            <td>{{ msg.Submission_time }}</td>
+            <td>
+                <a href="{{ url_for('delete_message', msg_id=msg.ID) }}" 
+                   onclick="return confirm('Delete message?')">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    {% else %}
+        <tr><td colspan="8">No messages found</td></tr>
+    {% endif %}
+</table>
+
+</body>
+</html>

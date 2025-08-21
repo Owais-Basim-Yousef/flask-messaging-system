@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="{{ 'ar' if lang == 'ar' else 'en' }}" dir="{{ 'rtl' if lang == 'ar' else 'ltr' }}">
+
+<head>
+    <meta charset='utf-8'>
+
+    <title>
+     {% if lang == "en" %} Contact Messaging System {% else %} نظام التواصل {% endif %}
+     </title>
+
+    <link rel='stylesheet' href="{{ url_for('static',filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+<body>
+    
+        {% if success %}
+        <p style="color: green;">{{ success }}</p>
+        {% endif %}
+
+
+
+        
+    <div class="lang-switch-right">
+        {% if lang=="en" %}
+            <a href="{{ url_for('home_ar')}}">
+                <img src="{{ url_for('static', filename='icons/lan.png') }}" alt="lang icon" class="lang-icon">العربية
+            </a>
+        {% else %}
+        <div class="lang-switch-left">
+            <a href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='icons/lan.png') }}" alt="lang icon" class="lang-icon">English
+            </a>
+            </div>
+        {% endif %}
+    </div>
+
+    <form action="/submit" method="POST" onsubmit="return validateForm();">
+        
+        <h1 id="firstH">
+            {% if lang == "en" %} Contact Us {% else %} اتصل بنا {% endif %}
+        </h1>
+
+        <div class="form-field">
+            <label for="name">{% if lang == "en" %} Name: {% else %} الاسم: {% endif %}</label>
+            <input type="text" id="name" name="name" 
+                   placeholder="{% if lang=='en' %}Enter your full name{% else %}أدخل اسمك الكامل{% endif %}" required>
+        </div>
+
+        <div class="form-field">
+            <label for="email">{% if lang == "en" %} Email: {% else %} البريد الإلكتروني: {% endif %}</label>
+            <input type="email" id="email" name="email" 
+                   placeholder="example@email.com" required>
+            <img id="emailIcon" src="{{url_for('static', filename='icons/yes.png') }}" alt="valid" width="16" height="16" style="vertical-align: middle; display: none;">
+        </div>
+
+        <div class="form-field">
+            <label for="phone">{% if lang == "en" %} Phone: {% else %} رقم الهاتف: {% endif %}</label>
+            <input type="text" id="phone" name="phone" 
+                   placeholder="{% if lang=='en' %}Enter your phone number{% else %}أدخل رقم هاتفك{% endif %}" required>
+            <img id="phoneIcon" src="{{url_for('static', filename='icons/yes.png') }}" alt="valid" width="16" height="16" style="vertical-align: middle; display: none;">
+        </div>
+
+        <div class="form-field">
+            <label for="subject">{% if lang == "en" %} Subject: {% else %} الموضوع: {% endif %}</label>
+            <input type="text" id="subject" name="subject" 
+                   placeholder="{% if lang=='en' %}Subject of your message{% else %}موضوع الرسالة{% endif %}" required>
+        </div>
+
+        <div class="form-field">
+            <label for="message">{% if lang == "en" %} Message: {% else %} الرسالة: {% endif %}</label>
+            <textarea name="message" id="message" rows="5" required 
+                      placeholder="{% if lang=='en' %}Type your message here...{% else %}اكتب رسالتك هنا...{% endif %}"></textarea>
+        </div>
+
+        <button type="submit" name="submitbutton">
+            {% if lang=="en" %} Submit {% else %} إرسال {% endif %}
+        </button>
+    </form>
+
+</body>
+</html>
+        <!--
+    <form action="/submit" method= "POST" onsubmit= "return validateForm();">
+        <h1 id="firstH">Contact Us</h1>
+
+        <div class="form-field">
+            <label for="name">Name:</label>
+            <input type="text"  id="name" name="name" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-field">
+            <label for="email">Email:</label>
+            <input type="email"  id="email" name="email" placeholder="example@email.com" required>
+            <img id="emailIcon" src="{{url_for('static', filename='icons/yes.png') }}" alt="valid" width="16" height="16" style="vertical-align: middle; display: none;">
+        </div>
+
+        <div class="form-field">
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
+            <img id="phoneIcon" src="{{url_for('static', filename='icons/yes.png') }}" alt="valid" width="16" height="16" style="vertical-align: middle; display: none;">
+        </div>
+
+        <div class="form-field">
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" placeholder="Subject of your message" required>
+        </div>
+
+        <div class="form-field">
+            <label for="message">Message:</label>
+            <textarea  name="message" id="message" placeholder="Type your message here..." rows="5" required></textarea>
+        </div>
+
+        <button type="submit" name="submitbutton">Submit</button>
+    </form>
+    
+</body>
+</html>        -->
