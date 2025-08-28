@@ -41,7 +41,7 @@ def submit():
             cursor.close()
             conn.close()
 
-            # detect language from form
+            
             if request.referrer and "/home_ar" in request.referrer:
                 return redirect(url_for("success_page_ar"))
             else:

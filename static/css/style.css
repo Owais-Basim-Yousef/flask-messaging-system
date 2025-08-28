@@ -1,25 +1,25 @@
-/* Page Style */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to right, #74ebd5, #ACB6E5);
+    background: linear-gradient(90deg, #727cf5 0%, #7a5af8 100%);
     margin: 0;
-    height: 100vh;
+    height: 100vh;          
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-/* Contact Form Styling */
 form {
-    background-color: #ffffffcc;
+    background-color: #f2f2f5; /* very light gray close to white */
     padding: 30px;
     border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     max-width: 450px;
     width: 100%;
-    backdrop-filter: blur(5px);
 }
+
+
 
 #firstH {
     color: #333;
@@ -68,7 +68,7 @@ textarea:not(:placeholder-shown) {
 button {
     margin-top: 20px;
     width: 100%;
-    background-color: #007bff;
+    background-color: #a993ff; /* new purple button */
     color: white;
     padding: 12px;
     border: none;
@@ -79,10 +79,13 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #c4b7f9;
 }
 
-/* Icon Styling for Validation */
+
+
+
+
 form img {
     position: absolute;
     right: 10px;
@@ -91,8 +94,14 @@ form img {
     height: 18px;
     display: none;
 }
+html[dir="rtl"] form img {
+    right: auto;  
+    left: 10px;    
+}
 
-/* Admin Table Styling */
+
+
+
 table {
     width: 95%;
     margin: 20px auto;
@@ -141,26 +150,53 @@ h1 {
     margin-top: 30px;
 }
 
-/* Admin filter/search form */
-#adminSearch {
-    padding: 8px;
-    width: 250px;
-    border: 1px solid #aaa;
-    border-radius: 6px;
+
+
+.search-bar{
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+    max-width: none;
+    width: 500px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
 }
 
-#adminButton {
-    padding: 8px 16px;
+.search-bar #adminSearch{
+    flex: 1;
+    padding: 12px;
     border: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
+    outline: none;
+    font-size: 14px;
+    color: #333;
+    border-radius: 8px 0 0 8px;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
-#adminButton:hover {
-    background-color: #0056b3;
+.search-bar #adminButton{
+    background: #a993ff;
+    color: #fff;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    padding: 12px 24px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
+
+.search-bar #adminButton:hover{ 
+    opacity: 0.9;
+
+}
+
+
+
+
 
 .success-container {
     background-color: #ffffffcc;
@@ -223,6 +259,8 @@ h1 {
     width: 30px;
     height: 30px;
 }
+
+
 
 
 
