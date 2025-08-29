@@ -10,14 +10,24 @@ body {
     flex-direction: column;
 }
 
-form {
-    background-color: #f2f2f5; /* very light gray close to white */
+
+form.home-form {
+    background-color: rgb(242, 242, 245);
     padding: 30px;
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;  
     max-width: 450px;
     width: 100%;
 }
+
+form.home-form input,
+form.home-form textarea {
+    border-radius: 3px;   
+}
+
+form.home-form button {
+    border-radius: 3px;   
+}
+
 
 
 
@@ -45,7 +55,7 @@ label {
     padding: 12px;
     margin-top: 5px;
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 3px;
     box-sizing: border-box;
     font-size: 14px;
     transition: border-color 0.3s ease-in-out;
@@ -68,11 +78,11 @@ textarea:not(:placeholder-shown) {
 button {
     margin-top: 20px;
     width: 100%;
-    background-color: #a993ff; /* new purple button */
+    background-color: #a993ff;
     color: white;
     padding: 12px;
     border: none;
-    border-radius: 8px;
+    border-radius: 3px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -106,93 +116,134 @@ table {
     width: 95%;
     margin: 20px auto;
     border-collapse: collapse;
-    background-color: #ffffffcc;
     backdrop-filter: blur(5px);
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
     font-family: 'Segoe UI', sans-serif;
 }
 
 th, td {
-    border: 1px solid #ccc;
+    border: 1px solid #ffffff00;
     padding: 12px 10px;
     text-align: center;
     font-size: 14px;
 }
 
 th {
-    background-color: #007bff;
-    color: white;
+    background-color: rgb(237, 237, 240);
+    color: rgba(0, 0, 0, 0.502);
     cursor: pointer;
 }
 
 th a {
-    color: white;
+    color:  rgba(0, 0, 0, 0.502);
     text-decoration: none;
     display: block;
 }
 
 th a:hover {
     text-decoration: underline;
-    color: #d4e3ff;
+    color: #000000;
 }
 
 td {
     color: #333;
-    background-color: #f9f9f9;
+    background-color: rgb(252, 252, 255);
 }
 
 tr:hover td {
     background-color: #e0f0ff;
 }
 
-h1 {
-    text-align: center;
-    margin-top: 30px;
+
+
+
+
+
+body.admin{
+    display: block;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #727cf5 0%, #7a5af8 100%);
 }
 
 
 
+body.admin form:not(.search-bar){
+    background-color: #f2f2f5;
+    padding: 30px;
+    border-radius: 16px;  
+    max-width: 450px;
+    width: 100%;
+}
+
+form.home-form {
+    background-color: #f2f2f5;
+    padding: 30px;
+    border-radius: 4px;   
+    max-width: 450px;
+    width: 100%;
+}
+
+form.home-form input,
+form.home-form textarea {
+    border-radius: 3px;
+}
+
+form.home-form button {
+    border-radius: 3px;
+}
+
+
 .search-bar{
-    background: transparent;
-    padding: 0;
-    border-radius: 0;
-    box-shadow: none;
-    backdrop-filter: none;
-    max-width: none;
-    width: 500px;
-    margin: 20px auto;
+    width: 100%;  
+    max-width: 1200px;  
+    margin: 20px auto 30px 60px;  
     display: flex;
     align-items: center;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
 }
 
 .search-bar #adminSearch{
     flex: 1;
-    padding: 12px;
+    padding: 18px 20px;           
     border: none;
     outline: none;
-    font-size: 14px;
+    font-size: 16px;
     color: #333;
-    border-radius: 8px 0 0 8px;
+    border-radius: 4px 0 0 4px;
     background: #fff;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
 .search-bar #adminButton{
-    background: #a993ff;
+    background-color: #a993ff;
     color: #fff;
     border: none;
-    border-radius: 0 8px 8px 0;
-    padding: 12px 24px;
-    font-size: 14px;
+    border-radius: 0 4px 4px 0;
+    padding: 18px 36px;   
+    font-size: 16px;
+    font-weight: 500;
     cursor: pointer;
     transition: opacity 0.3s ease;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.search-bar #adminButton:hover {
+    background-color: #c4b7f9;
 }
 
-.search-bar #adminButton:hover{ 
-    opacity: 0.9;
 
+
+
+
+
+@media (max-width: 768px){
+    .search-bar{
+        margin-left: 16px;
+        max-width: calc(100% - 32px);
+        width: auto;
+    }
 }
+
+
+
 
 
 
