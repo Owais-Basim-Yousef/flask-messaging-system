@@ -8,7 +8,9 @@ This was during a university course (Web development) to train on the building b
 and database integration. but it was with PHP instead of flask.
 
 
+
 features:
+
 
 User Message Form: Include your name, email, phone, subject and message.
 
@@ -21,3 +23,19 @@ Admin Panel: The admin will be able to see messages the way in a nice table and 
 Message Management: The administration is free to remove messages.
 
 Arabic Language Support: The system operates on English and on Arabic.
+
+
+
+Screenshots:
+
+English Version:-
+![English Version](screenshots/home-page(english).png)
+![English Version](screenshots/success-page(english).png)
+
+Admin Panel:-
+![Admin Panel](screenshots/admin.png)
+
+Arabic Version:-
+![Arabic Version](screenshots/home-page(arabic).png)
+![Arabic Version](screenshots/success-page(arabic).png)
+
