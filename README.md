@@ -26,16 +26,16 @@ Arabic Language Support: The system operates on English and on Arabic.
 
 
 
-#Screenshots:
+Screenshots:
 
-##English Version:-
+English Version:-
 ![English Version](screenshots/home-page(english).png)
 ![English Version](screenshots/success-page(english).png)
 
-##Admin Page:-
+Admin Page:-
 ![Admin Panel](screenshots/admin.png)
 
-##Arabic Version:-
+Arabic Version:-
 ![Arabic Version](screenshots/home-page(arabic).png)
 ![Arabic Version](screenshots/success-page(arabic).png)
 
