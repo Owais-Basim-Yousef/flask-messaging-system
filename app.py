@@ -4,14 +4,13 @@ from dotenv import load_dotenv
 import os
 
 app = Flask(__name__)
-app.secret_key = "8c6faad5c5e749c2afbb1a9d88bdb7d6"  
-
-db_config = {
-    'host': '127.0.0.1',       
-    'port': 3307,             
-    'user': 'root',            
-    'password': 'Newp@ssword123', 
-    'database': 'contact_messaging_cm'
+app.secret_key = os.getenv("SECRET_KEY")
+db_config={
+    'host': os.getenv("DB_HOST"),
+    'port': int(os.getenv("DB_PORT",3307)),
+    'user': os.getenv("DB_USER"),
+    'password': os.getenv("DB_PASSWORD"),
+    'database': os.getenv("DB_NAME")
 }
 
 
