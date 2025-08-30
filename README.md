@@ -3,7 +3,7 @@ Contact Messaging (CM) System
 
 
 Its a web based contact messaging system using python Flask, MySQL, JavaScript, and CSS, which offers site visitors a convenient way to 
-conctact by dropping messages then the admin can see them from his site. originally
+contact by dropping messages then the admin can see them from his site. originally
 This was during a university course (Web development) to train on the building blocks of web development, in terms of dynamic content, client-side validation,
 and database integration. but it was with PHP instead of flask.
 
