@@ -250,10 +250,9 @@ form.home-form button {
 
 
 .success-container {
-    background-color: #ffffffcc;
+    background-color: rgb(242, 242, 245);
     padding: 30px;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
     max-width: 450px;
     width: 100%;
     backdrop-filter: blur(5px);
@@ -267,17 +266,17 @@ form.home-form button {
 
 .btn {
     display: inline-block;
-    background-color: #007bff;
+    background-color: #a993ff;
     color: white;
     padding: 12px 20px;
-    border-radius: 8px;
+    border-radius: 5px;
     text-decoration: none;
     font-size: 16px;
     transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background-color: #c4b7f9;
 }
 
 .lang-switch-right{

@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request, redirect, flash, url_for
 import mysql.connector
+from dotenv import load_dotenv
+import os
 
 app = Flask(__name__)
 app.secret_key = "8c6faad5c5e749c2afbb1a9d88bdb7d6"  
